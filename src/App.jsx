@@ -22,7 +22,7 @@ function App() {
 
       try {
         const response = await fetch(
-          "https://pptx-to-text-server.vercel.app/api/upload/convert-pptx-to-text",
+          "https://pptx-to-text-server0.vercel.app/api/upload/convert-pptx-to-text",
           {
             method: "POST",
             body: formData,
@@ -80,7 +80,7 @@ function App() {
       >
         {isLoading ? (
           <div>
-            <Loader h={4} w={4} /> Loading
+            <Loader /> Loading
           </div>
         ) : (
           "Convert"
