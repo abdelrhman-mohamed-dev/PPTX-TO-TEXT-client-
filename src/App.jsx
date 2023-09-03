@@ -22,7 +22,7 @@ function App() {
 
       try {
         const response = await fetch(
-          "https://pptx-to-text-server0.vercel.app/api/upload/convert-pptx-to-text",
+          "https://pptx-to-text-server.onrender.com/api/upload/convert-pptx-to-text",
           {
             method: "POST",
             body: formData,
@@ -87,7 +87,12 @@ function App() {
         )}
       </button>
       {isLoading ? (
-        ""
+        <div className="text-center mt-8 ">
+          <span>
+            please wait it may take minutes because the server is a free
+            deployment
+          </span>
+        </div>
       ) : (
         <div className="text-sm md:text-base lg:text-lg xl:text-xl mt-8">
           {textBlocks.map((block, index) => (
